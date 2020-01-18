@@ -6,6 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       <Text>I am trying to add more text to the file</Text>
+      <Text>I hate react native</Text>
     </View>
   );
 }
