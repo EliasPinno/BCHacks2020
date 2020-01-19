@@ -39,8 +39,8 @@ const MatrixContainer = props => {
 };
 const styles = StyleSheet.create({
   headContainer: {
-    flex: 2,
-    width: parentSizeX,
+    flex: 3,
+    // width: parentSizeX,
     height: parentSizeY,
     aspectRatio: 1,
     margin: margin,

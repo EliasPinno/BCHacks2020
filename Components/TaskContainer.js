@@ -5,7 +5,7 @@ import TaskBuilder from './TaskBuilder.js';
 
 const TaskContainer = props =>{
   return(
-    <View>
+    <View style = {styles.headContainer}>
       <View style={styles.taskBuilderStyle}>
         <TaskBuilder />
       </View>
@@ -17,6 +17,10 @@ const TaskContainer = props =>{
 };
 
 const styles = StyleSheet.create({
+  headContainer: {
+    marginTop: 15,
+    flex: 1,
+  },
   toDoListStyle: {
 
   },
