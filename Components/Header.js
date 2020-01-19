@@ -8,19 +8,28 @@ const Header = ({ title }) => {
 
   <View style={styles.headerContainer}>
     <Text style={styles.headerText}> {title.toUpperCase()} </Text>
+    <NavBar style = {styles.nav} />
   </View>
 );
 };
 
 const styles = StyleSheet.create({
   headerContainer: {
-    marginTop: 40,
-    backgroundColor: 'red'
+    flexDirection: 'row',
+    flex: 2,
+    alignContent: "space-between",
+    backgroundColor: '#FFFFFF'
   },
   headerText: {
+    flex: 1,
     color: 'black',
     fontSize: 22,
-    fontWeight: '500'
+    fontWeight: 'bold'
+  },
+  nav: {
+    width: 1,
+    alignItems: 'flex-end'
   }
+
 });
 export default Header;
