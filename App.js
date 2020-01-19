@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import MatrixContainer from "./Components/MatrixContainer";
 import Header from './app/components/Header.js';
 const headerTitle = 'To Do';
 
@@ -9,6 +10,7 @@ export default function App() {
       <StatusBar backgroundColor = 'black' barStyle="light-content"/>
       <View style={styles.centered, styles.container}>
         <Header title={headerTitle} />
+        <MatrixContainer />
       </View>
       </View>
     );
@@ -23,3 +25,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   }
 });
+/*
+
+<Button title ="AHHHHHH" />
+
+      <TextInput placeholder="Write something here"/>
+*/
