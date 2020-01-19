@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 import { Dimensions } from 'react-native';
 import Tabs from './Tabs';
 const margin = 15;
@@ -21,6 +21,21 @@ const MatrixContainer = props => {
       <View style={styles.eachRow}>
         <View style={styles.topLeft}>
           <Tabs title = "Do Now" color = 'red'/>
+          <FlatList onPress={() => {};
+          data={[
+            {key: 'Devin'},
+            {key: 'Dan'},
+            {key: 'Dominic'},
+            {key: 'Jackson'},
+            {key: 'James'},
+            {key: 'Joel'},
+            {key: 'John'},
+            {key: 'Jillian'},
+            {key: 'Jimmy'},
+            {key: 'Julie'},
+          ]}
+          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+        />
         </View>
         <View style={styles.topRight}>
           <Tabs title = "Schedule"/>
@@ -52,6 +67,12 @@ const styles = StyleSheet.create({
     alignContent: 'space-between',
     backgroundColor: 'white',
     marginTop: 10
+  },
+  item: {
+    backgroundColor: 'white',
+    padding: 10,
+    fontSize: 18,
+    height: 44,
   },
   eachRow: {
     flex: 1,
