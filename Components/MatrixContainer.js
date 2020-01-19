@@ -2,18 +2,18 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 const MatrixContainer = props => {
   return (
-    <View style={style.headContainer}>
+    <View style={styles.headContainer}>
       <Text>"EEEEEEEEE"</Text>
-      <View style={style.topLeft}>
+      <View style={styles.topLeft}>
 
       </View>
-      <View style={style.topRight}>
+      <View style={styles.topRight}>
 
       </View>
-      <View style={style.botLeft}>
+      <View style={styles.botLeft}>
 
       </View>
-      <View style={style.botRight}>
+      <View style={styles.botRight}>
 
       </View>
     </View>
@@ -21,6 +21,8 @@ const MatrixContainer = props => {
 };
 const styles = StyleSheet.create({
   headContainer: {
+    marginTop: 40,
+
   },
   topLeft: {
   },
