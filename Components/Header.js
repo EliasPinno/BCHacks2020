@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import NavBar from './NavBar.js';
 
 const Header = ({ title }) => {
   return(
   //LOGOS in Views
-
 
   <View style={styles.headerContainer}>
     <Text style={styles.headerText}> {title.toUpperCase()} </Text>
