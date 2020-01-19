@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { StyleSheet, Text, View, Button,TextInput,Slider } from 'react-native';
 import InputDate from './InputDate.js'
-
+const borderRadius = 5;
 const TaskBuilder = props => {
   /*
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -57,12 +57,8 @@ const TaskBuilder = props => {
           <Button title = "Create Task" color = "#F2C759" style = {{fontWeight:'bold'}} />
         </View>
       </View>
-      </View>
       <View>
         <InputDate />
-      </View>
-      <View style={styles.ButtonStyling}>
-        <Button title = "Create Task" color = "blue" />
       </View>
     </View>
   );
