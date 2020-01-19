@@ -1,12 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Modal, TouchableHighlight } from 'react-native';
 
 const NavBar = ({ title }) => {
+  var state = {
+    modalVisible: false,
+  };
+
+  var setModalVisible = function(visible) {
+   setState({modalVisible: visible});
+ };
+
   return (
     <View style = {styles.master}>
-      <Text style = {styles.t2}> Account </Text>
+      <Text style = {styles.t2} onPress={() => {
+        setModalVisible(!state.modalVisible);}}> Account </Text>
       <Text style = {styles.t1}> Settings </Text>
-    </View>
+      </View>
   );
 };
 

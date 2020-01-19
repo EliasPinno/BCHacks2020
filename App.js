@@ -3,7 +3,8 @@ import { StyleSheet, Text, View} from 'react-native';
 import MatrixContainer from "./Components/MatrixContainer.js";
 import Header from './Components/Header.js';
 import TaskContainer from './Components/TaskContainer.js'
-const headerTitle = 'To Do';
+import NavBar from './Components/NavBar';
+const headerTitle = 'ToDo';
 
 export default function App() {
     return (
