@@ -21,7 +21,7 @@ const MatrixContainer = props => {
       <View style={styles.eachRow}>
         <View style={styles.topLeft}>
           <Tabs title = "Do Now" color = 'red'/>
-          <FlatList onPress={() => {};
+          <FlatList /*onPress={() => {};*/
           data={[
             {key: 'Devin'},
             {key: 'Dan'},
@@ -37,16 +37,13 @@ const MatrixContainer = props => {
           renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
         </View>
-        <View style={styles.topRight}>
-          <Tabs title = "Schedule"/>
-        </View>
-      </View>
-      <View style={styles.eachRow}>
-        <View style={styles.botLeft}>
-          <Tabs title = "Delegate" />
-        </View>
-        <View style={styles.botRight}>
-          <Tabs title = "Burn Task" />
+        <View style={styles.eachRow}>
+          <View style={styles.botLeft}>
+            <Tabs title = "Delegate" />
+          </View>
+          <View style={styles.botRight}>
+            <Tabs title = "Burn Task" />
+          </View>
         </View>
       </View>
     </View>

@@ -32,25 +32,31 @@ const TaskBuilder = props => {
   };
 
   return(
-    <View style ={styles.titleField}>
-
-      <View style={styles.TextFields}>
-        <Text>What is the task?</Text>
+    <View style={styles.headContainer }>
+      <View style ={styles.titleField}>
+        <View style={styles.TextFields}>
+          <Text style = {styles.textStyling}>What is the task?</Text>
+        </View>
+        <View style={styles.textInputStyle}>
+          <TextInput placeholder="Write what the task is" onChangeText={text => onChangeText(text)}
+        value={title}/>
+        </View>
+        <View style={styles.TextFields}>
+          <Text style = {styles.textStyling}>How important is this task?</Text>
+        </View>
+        <View style={styles.textInputStyle}>
+          <TextInput placeholder="Input the priority (1-5)" onChangeText={text => fixPriority(text)} value={priority}/>
+        </View>
+        <View style={styles.TextFields}>
+          <Text style = {styles.textStyling}>When does this task need to be done?</Text>
+        </View>
+        <View style={styles.textInputStyle}>
+          <TextInput placeholder ="Input deadline" onChangeText={text => fixPriority(text)} />
+        </View>
+        <View style={styles.ButtonStyling}>
+          <Button title = "Create Task" color = "#F2C759" style = {{fontWeight:'bold'}} />
+        </View>
       </View>
-      <View>
-        <TextInput placeholder="Write what the task is" onChangeText={text => onChangeText(text)}
-      value={title}/>
-      </View>
-
-      <View style={styles.TextFields}>
-        <Text>How important is this task?</Text>
-      </View>
-      <View>
-        <TextInput placeholder="Input the priority (1-5)" onChangeText={text => fixPriority(text)} value={priority}/>
-      </View>
-
-      <View style={styles.TextFields}>
-        <Text>When does this task need to be done?</Text>
       </View>
       <View>
         <InputDate />
@@ -64,15 +70,32 @@ const TaskBuilder = props => {
 
 const styles = StyleSheet.create({
   TextFields: {
-    backgroundColor: 'red'
+    backgroundColor: '#F2C759',
+    height: 30
   },
   textStyling: {
     color: 'black',
-    fontSize: 22,
-    fontWeight: 'bold'
+    fontSize: 16,
+    textAlign: 'left',
+    fontWeight: '600',
+    paddingLeft: 7,
+    paddingTop:3
   },
-  titleField:{
-
+  headContainer: {
+    marginTop:-5,
+    marginRight:15,
+    height: 340,
+    borderRadius: borderRadius,
+    shadowOffset: { width: 6,  height: 6, },
+    shadowColor: 'black',
+    shadowOpacity: 0.2,
+    shadowRadius: 12,
+    alignContent: 'space-between',
+    backgroundColor: 'white',
+  },
+  textInputStyle:{
+    backgroundColor:'F5F5F5',
+    height: 70
   },
 });
 export default TaskBuilder;
