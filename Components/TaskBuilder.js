@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   textStyling: {
     color: 'black',
     fontSize: 22,
-    fontWeight: '500'
+    fontWeight: 'bold'
   },
 });
 export default TaskBuilder;

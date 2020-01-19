@@ -11,12 +11,13 @@ const Tabs = ({ title }) => {
 
 const styles = StyleSheet.create({
   sizing: {
-    width: 500,
-    height: 500
+    aspectRatio: 1
   },
 
   headerText: {
-
+    padding: 45,
+    fontWeight:'bold',
+    color: '#FFF'
   }
 });
 

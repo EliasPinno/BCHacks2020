@@ -1,6 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions } from 'react-native';
 import Tabs from './Tabs';
+const margin = 25;
+const borderRadius = 8;
+var parentSize = Dimensions.get('window').width * (2/3);
 
 const MatrixContainer = props => {
   return (
@@ -27,7 +31,13 @@ const MatrixContainer = props => {
 const styles = StyleSheet.create({
   headContainer: {
     flex: 2,
-    width: 500,
+    width: parentSize,
+    height: parentSize,
+    aspectRatio: 1,
+    margin: margin,
+    borderRadius: borderRadius,
+    alignContent: 'space-between',
+    backgroundColor: 'blue',
     marginTop: 40
   },
   eachRow: {
@@ -36,19 +46,26 @@ const styles = StyleSheet.create({
   },
   topLeft: {
     flex: 1,
+    borderRadius: borderRadius,
+    margin: margin,
     backgroundColor: 'red'
   },
   topRight: {
     flex: 1,
-    borderRadius: 50,
+    borderRadius: borderRadius,
+    margin: margin,
     backgroundColor: 'yellow'
   },
   botLeft: {
     flex: 1,
+    borderRadius: borderRadius,
+    margin: margin,
     backgroundColor: 'green'
   },
   botRight: {
     flex: 1,
+    borderRadius: borderRadius,
+    margin: margin,
     backgroundColor: 'purple'
   },
 });
