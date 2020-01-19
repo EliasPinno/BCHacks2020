@@ -1,23 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import Header from './app/components/Header.js';
+const headerTitle = 'To Do';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>I am trying to add more text to the file</Text>
-      <Text>I hate react native</Text>
-    </View>
-  );
+    return (
+      <View>
+      <StatusBar backgroundColor = 'black' barStyle="light-content"/>
+      <View style={styles.centered, styles.container}>
+        <Header title={headerTitle} />
+      </View>
+      </View>
+    );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    color: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#000"
   },
-
+  centered: {
+    alignItems: 'center',
+  }
 });
