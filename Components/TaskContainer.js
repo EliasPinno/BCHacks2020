@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   taskBuilderStyle:{
 
-  }
+  },
 });
 
 export default TaskContainer;
