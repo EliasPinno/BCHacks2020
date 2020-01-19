@@ -21,6 +21,17 @@ const TaskBuilder = props => {
   const [title, onChangeText] = React.useState('');
   const [priority, onChangePriority] = React.useState('');
 
+  const fixPriority = (enteredText) => {
+    if(enteredText.charCodeAt(0) < 49 ){
+      enteredText = "";
+    }else if(enteredText.charCodeAt(0) > 53){
+      enteredText = "";
+    }else if(enteredText.length > 1){
+      enteredText = enteredText.charAt(0);
+    }
+    onChangePriority(enteredText);
+  };
+
   return(
     <View style ={styles.titleField}>
 
@@ -36,7 +47,7 @@ const TaskBuilder = props => {
         <Text>How important is this task?</Text>
       </View>
       <View>
-        <TextInput placeholder="Write what the task is" onChangeText={text => onChangePriority(text)} value={priority}/>
+        <TextInput placeholder="Input the priority (1-5)" onChangeText={text => fixPriority(text)} value={priority}/>
       </View>
 
       <View style={styles.TextFields}>
