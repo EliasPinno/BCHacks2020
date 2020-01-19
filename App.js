@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import MatrixContainer from "./Components/MatrixContainer";
-import Header from './app/components/Header.js';
+import Header from './Components/Header.js';
 const headerTitle = 'To Do';
 
 export default function App() {
