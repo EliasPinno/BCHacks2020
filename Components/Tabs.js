@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 
-const Tabs = ({ title, colors }) => {
+const Tabs = ({ title }) => {
   return (
     <View style = {styles.sizing}>
       <Text style = {styles.headerText}> {title} </Text>
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOpacity: 0.2,
     shadowRadius: 12,
+  },
+  leftSide: {
+
   },
   headerText: {
     padding: 30,
