@@ -16,7 +16,7 @@ const TaskBuilder = props => {
     <View style ={styles.titleField}>
 
       <View style={styles.TextFields}>
-        <Text>The title of the task</Text>
+        <Text style = {}>The title of the task</Text>
       </View>
 
       <View>
