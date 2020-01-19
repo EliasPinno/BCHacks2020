@@ -1,6 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+const MatrixContainer = props => {
+  return (
+    <View>
+      <Text>"EEEEEEEEE"</Text>
+      <View>
 
-export default class App extends React.Component{
-  
-}
+      </View>
+      <View>
+
+      </View>
+      <View>
+
+      </View>
+      <View>
+      
+      </View>
+    </View>
+  );
+};
+export default MatrixContainer;

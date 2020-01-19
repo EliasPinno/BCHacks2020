@@ -26,6 +26,12 @@ const styles = StyleSheet.create({
   }
 });
 /*
+<<<<<<< HEAD
 <Button title ="AHHHHHH" />
+=======
+
+<Button title ="AHHHHHH" />
+
+>>>>>>> 4bf66a5b3fa3e99bd997258f09378148d2ecd2ff
       <TextInput placeholder="Write something here"/>
 */
