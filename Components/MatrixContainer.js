@@ -6,6 +6,13 @@ const margin = 15;
 const borderRadius = 5;
 var parentSizeX = Dimensions.get('window').width * (2/3);
 var parentSizeY = Dimensions.get('window').height * (8.4/10);
+const s1 = "#000";
+const s2 = {
+  	width: 3,
+  	height: 3,
+  };
+const s3 = 0.2;
+const s4 = 8.5;
 
 
 const MatrixContainer = props => {
@@ -13,10 +20,10 @@ const MatrixContainer = props => {
     <View style={styles.headContainer}>
       <View style={styles.eachRow}>
         <View style={styles.topLeft}>
-          <Tabs title = "Do Now" color = '0000FF'/>
+          <Tabs title = "Do Now" color = 'red'/>
         </View>
         <View style={styles.topRight}>
-          <Tabs title = "Schedule" color = '#000'/>
+          <Tabs title = "Schedule"/>
         </View>
       </View>
       <View style={styles.eachRow}>
@@ -57,7 +64,11 @@ const styles = StyleSheet.create({
     marginLeft: margin,
     marginRight: margin,
     marginBottom: margin,
-    backgroundColor: 'red'
+    shadowColor: s1,
+    shadowOffset: s2,
+    shadowOpacity: s3,
+    shadowRadius: s4,
+    backgroundColor: '#A6C2E3'
   },
   topRight: {
     flex: 1,
@@ -65,7 +76,11 @@ const styles = StyleSheet.create({
     marginTop: margin,
     marginRight: margin,
     marginBottom: margin,
-    backgroundColor: 'yellow'
+    shadowColor: s1,
+    shadowOffset: s2,
+    shadowOpacity: s3,
+    shadowRadius: s4,
+    backgroundColor: '#B6DBE0'
   },
   botLeft: {
     flex: 1,
@@ -73,14 +88,22 @@ const styles = StyleSheet.create({
     marginLeft: margin,
     marginBottom: margin,
     marginRight: margin,
-    backgroundColor: 'green'
+    shadowColor: s1,
+    shadowOffset: s2,
+    shadowOpacity: s3,
+    shadowRadius: s4,
+    backgroundColor: '#F2C759'
   },
   botRight: {
     flex: 1,
     borderRadius: borderRadius,
     marginRight : margin,
     marginBottom: margin,
-    backgroundColor: 'purple'
+    shadowColor: s1,
+    shadowOffset: s2,
+    shadowOpacity: s3,
+    shadowRadius: s4,
+    backgroundColor: '#F2C2C2'
   },
 });
 export default MatrixContainer;
