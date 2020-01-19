@@ -17,24 +17,24 @@ const s4 = 8.5;
 
 const MatrixContainer = props => {
   return (
-    <View style={styles.headContainer}>
-      <View style={styles.eachRow}>
-        <View style={styles.topLeft}>
-          <Tabs title = "Do Now" color = 'red'/>
+      <View style={styles.headContainer}>
+        <View style={styles.eachRow}>
+          <View style={styles.topLeft}>
+            <Tabs title = "Do Now" color = 'red'/>
+          </View>
+          <View style={styles.topRight}>
+            <Tabs title = "Schedule"/>
+          </View>
         </View>
-        <View style={styles.topRight}>
-          <Tabs title = "Schedule"/>
+        <View style={styles.eachRow}>
+          <View style={styles.botLeft}>
+            <Tabs title = "Delegate" />
+          </View>
+          <View style={styles.botRight}>
+            <Tabs title = "Burn Task" />
+          </View>
         </View>
       </View>
-      <View style={styles.eachRow}>
-        <View style={styles.botLeft}>
-          <Tabs title = "Delegate" />
-        </View>
-        <View style={styles.botRight}>
-          <Tabs title = "Burn Task" />
-        </View>
-      </View>
-    </View>
   );
 };
 const styles = StyleSheet.create({
