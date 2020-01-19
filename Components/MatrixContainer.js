@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Dimensions } from 'react-native';
 import Tabs from './Tabs';
 const margin = 15;
-const borderRadius = 8;
+const borderRadius = 5;
 var parentSizeX = Dimensions.get('window').width * (2/3);
 var parentSizeY = Dimensions.get('window').height * (8.4/10);
 
@@ -13,10 +13,10 @@ const MatrixContainer = props => {
     <View style={styles.headContainer}>
       <View style={styles.eachRow}>
         <View style={styles.topLeft}>
-          <Tabs title = "Do Now" />
+          <Tabs title = "Do Now" color = '0000FF'/>
         </View>
         <View style={styles.topRight}>
-          <Tabs title = "Schedule" />
+          <Tabs title = "Schedule" color = '#000'/>
         </View>
       </View>
       <View style={styles.eachRow}>

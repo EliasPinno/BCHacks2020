@@ -8,7 +8,7 @@ const headerTitle = 'To Do';
 export default function App() {
     return (
       <View>
-        <View style={styles.centered, styles.container}>
+        <View style={styles.master}>
           <Header title={headerTitle} />
           <MatrixContainer />
           <TaskContainer />
@@ -19,12 +19,18 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  master: {
     flex: 1,
-    backgroundColor: "#000"
+    backgroundColor: "light blue"
   },
-  centered: {
+  mainLeft: {
     alignItems: 'center',
+  },
+  mainRight: {
+    alignItems: 'right',
+  },
+  mainTop: {
+
   }
 });
 /*
