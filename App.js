@@ -20,10 +20,11 @@ export default function App() {
 
 const styles = StyleSheet.create({
   master: {
-    flex: 1,
+    flex: 3,
     backgroundColor: "#F5F5F5"
   },
   mainLeft: {
+    flex: 2,
     alignItems: 'center',
   },
   mainRight: {
