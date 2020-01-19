@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button,TextInput } from 'react-native';
-import PrioritySlider from "./PrioritySlider.js"
+import { StyleSheet, Text, View, Button,TextInput,Slider } from 'react-native';
+
 const TaskBuilder = props => {
+  var state = {
+    slideValue: 0
+  }
   return(
     <View style ={styles.titleField}>
       <View style={styles.TextFields}>
@@ -12,9 +15,6 @@ const TaskBuilder = props => {
       </View>
       <View style={styles.TextFields}>
         <Text>How important is this task</Text>
-      </View>
-        <PrioritySlider />
-      <View>
       </View>
       <View style={styles.TextFields}>
         <Text>When does this task need to be done</Text>
