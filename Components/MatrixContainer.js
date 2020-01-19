@@ -2,9 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dimensions } from 'react-native';
 import Tabs from './Tabs';
-const margin = 25;
+const margin = 15;
 const borderRadius = 8;
-var parentSize = Dimensions.get('window').width * (2/3);
+var parentSizeX = Dimensions.get('window').width * (2/3);
+var parentSizeY = Dimensions.get('window').height * (8.4/10);
+
 
 const MatrixContainer = props => {
   return (
@@ -31,14 +33,18 @@ const MatrixContainer = props => {
 const styles = StyleSheet.create({
   headContainer: {
     flex: 2,
-    width: parentSize,
-    height: parentSize,
+    width: parentSizeX,
+    height: parentSizeY,
     aspectRatio: 1,
     margin: margin,
     borderRadius: borderRadius,
+    shadowOffset: { width: 6,  height: 6, },
+    shadowColor: 'black',
+    shadowOpacity: 0.2,
+    shadowRadius: 12,
     alignContent: 'space-between',
-    backgroundColor: 'blue',
-    marginTop: 40
+    backgroundColor: 'white',
+    marginTop: 10
   },
   eachRow: {
     flex: 1,
@@ -47,25 +53,33 @@ const styles = StyleSheet.create({
   topLeft: {
     flex: 1,
     borderRadius: borderRadius,
-    margin: margin,
+    marginTop: margin,
+    marginLeft: margin,
+    marginRight: margin,
+    marginBottom: margin,
     backgroundColor: 'red'
   },
   topRight: {
     flex: 1,
     borderRadius: borderRadius,
-    margin: margin,
+    marginTop: margin,
+    marginRight: margin,
+    marginBottom: margin,
     backgroundColor: 'yellow'
   },
   botLeft: {
     flex: 1,
     borderRadius: borderRadius,
-    margin: margin,
+    marginLeft: margin,
+    marginBottom: margin,
+    marginRight: margin,
     backgroundColor: 'green'
   },
   botRight: {
     flex: 1,
     borderRadius: borderRadius,
-    margin: margin,
+    marginRight : margin,
+    marginBottom: margin,
     backgroundColor: 'purple'
   },
 });
