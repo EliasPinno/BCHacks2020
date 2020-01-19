@@ -5,7 +5,6 @@ const Header = ({ title }) => {
   return(
   //LOGOS in Views
 
-
   <View style={styles.headerContainer}>
     <Text style={styles.headerText}> {title.toUpperCase()} </Text>
   </View>

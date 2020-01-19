@@ -1,37 +1,72 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions } from 'react-native';
+import Tabs from './Tabs';
+const margin = 25;
+const borderRadius = 8;
+var parentSize = Dimensions.get('window').width * (2/3);
+
 const MatrixContainer = props => {
   return (
     <View style={styles.headContainer}>
-      <Text>"EEEEEEEEE"</Text>
-      <View style={styles.topLeft}>
-
+      <View style={styles.eachRow}>
+        <View style={styles.topLeft}>
+          <Tabs title = "Do Now" />
+        </View>
+        <View style={styles.topRight}>
+          <Tabs title = "Schedule" />
+        </View>
       </View>
-      <View style={styles.topRight}>
-
-      </View>
-      <View style={styles.botLeft}>
-
-      </View>
-      <View style={styles.botRight}>
-
+      <View style={styles.eachRow}>
+        <View style={styles.botLeft}>
+          <Tabs title = "Delegate" />
+        </View>
+        <View style={styles.botRight}>
+          <Tabs title = "Burn Task" />
+        </View>
       </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
   headContainer: {
-    marginTop: 40,
-
+    flex: 2,
+    width: parentSize,
+    height: parentSize,
+    aspectRatio: 1,
+    margin: margin,
+    borderRadius: borderRadius,
+    alignContent: 'space-between',
+    backgroundColor: 'blue',
+    marginTop: 40
+  },
+  eachRow: {
+    flex: 1,
+    flexDirection: 'row'
   },
   topLeft: {
-    width: 500,
+    flex: 1,
+    borderRadius: borderRadius,
+    margin: margin,
+    backgroundColor: 'red'
   },
   topRight: {
+    flex: 1,
+    borderRadius: borderRadius,
+    margin: margin,
+    backgroundColor: 'yellow'
   },
   botLeft: {
+    flex: 1,
+    borderRadius: borderRadius,
+    margin: margin,
+    backgroundColor: 'green'
   },
   botRight: {
+    flex: 1,
+    borderRadius: borderRadius,
+    margin: margin,
+    backgroundColor: 'purple'
   },
 });
 export default MatrixContainer;
