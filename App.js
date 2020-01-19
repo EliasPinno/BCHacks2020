@@ -9,9 +9,9 @@ export default function App() {
     return (
       <View>
         <View style={styles.master}>
-          <Header title={headerTitle} />
-          <MatrixContainer />
-          <TaskContainer />
+          <Header title={headerTitle} style = {styles.mainTop} />
+          <MatrixContainer style = {styles.mainLeft}/>
+          <TaskContainer style = {styles.mainRight}/>
         </View>
       </View>
 
@@ -20,17 +20,20 @@ export default function App() {
 
 const styles = StyleSheet.create({
   master: {
-    flex: 1,
-    backgroundColor: "light blue"
+    flex: 3,
+    backgroundColor: "#F5F5F5"
   },
   mainLeft: {
+    flex: 2,
     alignItems: 'center',
   },
   mainRight: {
+    flex: 1,
     alignItems: 'right',
+    backgroundColor: 'blue'
   },
   mainTop: {
-
+    height: 55,
   }
 });
 /*
