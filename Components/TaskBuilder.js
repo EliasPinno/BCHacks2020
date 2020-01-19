@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button,TextInput } from 'react-native';
+import PrioritySlider from "./PrioritySlider.js"
 const TaskBuilder = props => {
   return(
     <View style ={styles.titleField}>
