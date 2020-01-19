@@ -13,7 +13,7 @@ export default function App() {
           <View style = {styles.bottomRow}>
             <MatrixContainer style = {styles.mainLeft} />
             <TaskContainer style = {styles.mainRight} />
-          </View>ss
+          </View>
         </View>
       </View>
 
