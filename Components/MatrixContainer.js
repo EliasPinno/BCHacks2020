@@ -2,32 +2,36 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 const MatrixContainer = props => {
   return (
-    <View>
+    <View style={styles.headContainer}>
       <Text>"EEEEEEEEE"</Text>
-      <View>
+      <View style={styles.topLeft}>
 
       </View>
-      <View>
+      <View style={styles.topRight}>
 
       </View>
-      <View>
+      <View style={styles.botLeft}>
 
       </View>
-      <View>
+      <View style={styles.botRight}>
 
       </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
-  headerContainer: {
+  headContainer: {
     marginTop: 40,
-    backgroundColor: 'red'
+
   },
-  headerText: {
-    color: 'black',
-    fontSize: 22,
-    fontWeight: '500'
-  }
+  topLeft: {
+    width: 500,
+  },
+  topRight: {
+  },
+  botLeft: {
+  },
+  botRight: {
+  },
 });
 export default MatrixContainer;

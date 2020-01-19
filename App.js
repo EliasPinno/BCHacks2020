@@ -1,18 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
-import MatrixContainer from "./Components/MatrixContainer";
+import MatrixContainer from "./Components/MatrixContainer.js";
 import Header from './Components/Header.js';
+import TaskBuilder from './Components/TaskBuilder.js'
 const headerTitle = 'To Do';
 
 export default function App() {
     return (
       <View>
-      <StatusBar backgroundColor = 'black' barStyle="light-content"/>
-      <View style={styles.centered, styles.container}>
-        <Header title={headerTitle} />
-        <MatrixContainer />
+        <StatusBar backgroundColor = 'black' barStyle="light-content"/>
+        <View style={styles.centered, styles.container}>
+          <Header title={headerTitle} />
+          <MatrixContainer />
+        </View>
+        <View>
+          <TaskBuilder />
+        </View>
       </View>
-      </View>
+
     );
 }
 
