@@ -14,7 +14,7 @@ const MatrixContainer = props => {
 
       </View>
       <View>
-      
+
       </View>
     </View>
   );
