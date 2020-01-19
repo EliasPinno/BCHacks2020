@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   headContainer: {
   },
   topLeft: {
+    width: 500,
   },
   topRight: {
   },
