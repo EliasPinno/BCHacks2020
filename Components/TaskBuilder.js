@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { StyleSheet, Text, View, Button,TextInput,Slider } from 'react-native';
+import InputDate from './InputDate.js'
 
 const TaskBuilder = props => {
   /*
@@ -22,9 +23,7 @@ const TaskBuilder = props => {
   const [priority, onChangePriority] = React.useState('');
 
   const fixPriority = (enteredText) => {
-    if(enteredText.charCodeAt(0) < 49 ){
-      enteredText = "";
-    }else if(enteredText.charCodeAt(0) > 53){
+    if(enteredText.charCodeAt(0) < 49 || enteredText.charCodeAt(0) > 53){
       enteredText = "";
     }else if(enteredText.length > 1){
       enteredText = enteredText.charAt(0);
@@ -54,7 +53,7 @@ const TaskBuilder = props => {
         <Text>When does this task need to be done?</Text>
       </View>
       <View>
-
+        <InputDate />
       </View>
       <View style={styles.ButtonStyling}>
         <Button title = "Create Task" color = "blue" />
