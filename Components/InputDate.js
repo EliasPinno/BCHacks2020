@@ -65,13 +65,13 @@ const InputDate = (props) => {
   return(
     <View>
       <View>
-        <TextInput placeholder="DD" onChangeText={text => onChangeDay(text)} value={day}/>
+        <TextInput placeholder="DD" onChangeText={text => onChangeDay(text)} value={day} maxLength={2}/>
       </View>
       <View>
-        <TextInput placeholder="MM" onChangeText={text => onChangeMonth(text)} value={month}/>
+        <TextInput placeholder="MM" onChangeText={text => onChangeMonth(text)} value={month} maxLength={2}/>
       </View>
       <View>
-        <TextInput placeholder="YY" onChangeText={text => onChangeYear(text)} value={year}/>
+        <TextInput placeholder="YY" onChangeText={text => onChangeYear(text)} value={year} maxLength={2}/>
       </View>
     </View>
   );
