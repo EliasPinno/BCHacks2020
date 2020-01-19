@@ -18,6 +18,7 @@ const s4 = 8.5;
 const MatrixContainer = props => {
   return (
     <View style={styles.headContainer}>
+
       <View style={styles.eachRow}>
         <View style={styles.topLeft}>
           <Tabs title = "Do Now" color = 'red'/>
@@ -37,6 +38,12 @@ const MatrixContainer = props => {
           renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
         </View>
+
+        <View style = {styles.topRight}>
+          <Tabs title = "Schedule" color = 'red'/>
+        </View>
+        </View>
+
         <View style={styles.eachRow}>
           <View style={styles.botLeft}>
             <Tabs title = "Delegate" />
@@ -45,14 +52,12 @@ const MatrixContainer = props => {
             <Tabs title = "Burn Task" />
           </View>
         </View>
-      </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
   headContainer: {
     flex: 3,
-    // width: parentSizeX,
     height: parentSizeY,
     aspectRatio: 1,
     margin: margin,
