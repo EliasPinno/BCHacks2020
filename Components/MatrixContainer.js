@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
 
   },
   topLeft: {
+    width: 500,
   },
   topRight: {
   },
