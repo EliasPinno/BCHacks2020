@@ -10,8 +10,10 @@ export default function App() {
       <View>
         <View style={styles.master}>
           <Header title={headerTitle} style = {styles.mainTop} />
-          <MatrixContainer style = {styles.mainLeft}/>
-          <TaskContainer style = {styles.mainRight}/>
+          <View style = {styles.bottomRow}>
+            <MatrixContainer style = {styles.mainLeft} />
+            <TaskContainer style = {styles.mainRight} />
+          </View>
         </View>
       </View>
 
@@ -20,25 +22,25 @@ export default function App() {
 
 const styles = StyleSheet.create({
   master: {
-    flex: 3,
+    flexDirection: 'column',
     backgroundColor: "#F5F5F5"
   },
+  topRow: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  bottomRow: {
+    alignContent: 'space-between',
+    flexDirection: 'row',
+  },
   mainLeft: {
-    flex: 2,
-    alignItems: 'center',
+    flex: 4,
+    flexGrow: 4,
   },
   mainRight: {
     flex: 1,
-    alignItems: 'right',
-    backgroundColor: 'blue'
+    flexGrow: 1,
   },
   mainTop: {
-    height: 55,
   }
 });
-/*
-
-<Button title ="AHHHHHH" />
-
-      <TextInput placeholder="Write something here"/>
-*/

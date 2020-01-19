@@ -10,7 +10,7 @@ const ToDoBox = props => {
 
 const styles = StyleSheet.create( {
   headContainer: {
-    marginTop: 40,
+    flex: 1,
     backgroundColor: 'red'
   },
   textStyling: {

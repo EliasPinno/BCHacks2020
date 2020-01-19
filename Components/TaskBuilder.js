@@ -54,7 +54,6 @@ const TaskBuilder = props => {
 
 const styles = StyleSheet.create({
   TextFields: {
-    marginTop: 40,
     backgroundColor: 'red'
   },
   textStyling: {
